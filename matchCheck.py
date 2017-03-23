@@ -9,7 +9,7 @@ auth_token  = config.auth_token  # Your Auth Token from www.twilio.com/console
 
 data = open("out.txt").readline().rstrip()
 
-result = fuzz.ratio(data, "G61 4BG")
+result = fuzz.ratio(data, config.postcode)
 
 if result > 80:
 	print("match, sending text")
